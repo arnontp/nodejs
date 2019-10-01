@@ -1,0 +1,338 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Node API</title>
+  <meta name="description" content="Node API Landing Page">
+  <meta name="author" content="dmuellerstl">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body style="padding: 10px;">
+  <h1>API</h1>
+  <h6>Headers : X-access-token="Token"</h6>
+  <table class="table table-bordered table-striped table-dark">
+    <tr class="active">
+      <td width="8%">
+        MODULE
+      </td>
+      <td width="7%">
+        UI
+      </td>
+      <td width="30%">
+        URL
+      </td>
+      <td width="5%">
+        Auth
+      </td>
+      <td width="5%">
+        Method
+      </td>
+      <td width="15%">
+        Type
+      </td>
+      <td width="30%">
+        Params
+      </td>
+
+    </tr>
+   
+    <tr>
+      <td>
+        news
+      </td>
+      <td>
+        M001
+      </td>
+      <td>
+        http://localhost:3000/api/news
+      </td>
+      <td>
+        x
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>
+        user
+      </td>
+      <td>
+        M003
+      </td>
+      <td>
+        http://localhost:3000/authenticate
+      </td>
+      <td>
+        x
+      </td>
+      <td>
+        post
+      </td>
+      <td>
+        x-www-form-urlencoded
+      </td>
+      <td>
+        username=110000001,password=password
+      </td>
+
+    </tr>
+
+    <tr>
+        <td>
+          user
+        </td>
+        <td>
+          M004
+        </td>
+        <td>
+          http://localhost:3000/api/users/getUserProfile
+        </td>
+        <td>
+          /
+        </td>
+        <td>
+          get
+        </td>
+        <td>
+            
+        </td>
+        <td>
+         
+        </td>
+  
+      </tr>
+
+      <tr>
+          <td>
+            user
+          </td>
+          <td>
+            M005
+          </td>
+          <td>
+              http://localhost:3000/api/news/filter
+          </td>
+          <td>
+            x
+          </td>
+          <td>
+            get
+          </td>
+          <td>
+           
+          </td>
+          <td>
+              
+          </td>
+    
+        </tr>
+        <tr>
+            <td>
+              Config
+            </td>
+            <td>
+              M006
+            </td>
+            <td>
+                http://localhost:3000/api/config/getAgreement
+            </td>
+            <td>
+              x
+            </td>
+            <td>
+              get
+            </td>
+            <td>             
+            </td>
+            <td>                
+            </td>      
+          </tr>
+
+          <tr>
+              <td>
+                News
+              </td>
+              <td>
+                M008
+              </td>
+              <td>
+                  http://localhost:3000/api/news/getByID
+              </td>
+              <td>
+                x
+              </td>
+              <td>
+                get
+              </td>
+              <td>
+               
+              </td>
+              <td>
+                  NewsID=1
+              </td>
+        
+            </tr>
+        
+  
+    <tr>
+      <td>
+        Events
+      </td>
+      <td>
+        M009
+      </td>
+      <td>
+        http://localhost:3000/api/events
+      </td>
+      <td>
+        x
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+      </td>
+      <td>
+        lat=13.7224148,
+        long=100.5325895
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Events
+      </td>
+      <td>
+        M009-1
+      </td>
+      <td>
+        http://localhost:3000/api/events/getByID
+      </td>
+      <td>
+        x
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+      </td>
+      <td>
+        EventID=1,
+        lat=13.7224148,
+        long=100.5325895
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Ticket
+      </td>
+      <td>
+        M-010
+      </td>
+      <td>
+        http://localhost:3000/api/ticket/list
+      </td>
+      <td>
+        /
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+      </td>
+      <td>
+        EventID=1,
+        Status=Created
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Ticket
+      </td>
+      <td>
+        M-011
+      </td>
+      <td>
+        http://localhost:3000/api/ticket/list
+      </td>
+      <td>
+        /
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+      </td>
+      <td>
+        EventID=1,
+        Status=Updated
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Ticket
+      </td>
+      <td>
+        M-012
+      </td>
+      <td>
+        http://localhost:3000/api/ticket/list
+      </td>
+      <td>
+        /
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+      </td>
+      <td>
+        EventID=1,
+        Status=Completed
+      </td>
+    </tr>
+    <!-- <tr>
+      <td>
+        Ticket
+      </td>
+      <td>
+        Ticket
+      </td>
+      <td>
+        http://localhost:3000/api/ticket/FormByTicket
+      </td>
+      <td>
+        x
+      </td>
+      <td>
+        get
+      </td>
+      <td>
+      </td>
+      <td>
+        TicketID=1,
+        Hash="Hash"
+      </td>
+    </tr> -->
+
+  </table>
+</body>
+
+</html>

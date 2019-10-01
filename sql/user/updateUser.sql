@@ -1,0 +1,1 @@
+UPDATE users SET Password = @password,Salt = @salt WHERE UserID = 1

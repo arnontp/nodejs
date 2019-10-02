@@ -1,1 +1,0 @@
-SELECT * FROM config c WHERE c.ID = 1

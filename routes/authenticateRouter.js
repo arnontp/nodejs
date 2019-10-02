@@ -28,20 +28,18 @@ var authenticateRouter = function () {
     check('username').not().isEmpty(),
     check('password').not().isEmpty()
   ], function (req, res) {
-
-
+ 
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      return res.status(422).json(
+      return res.status(200).json(
         {
           success: false,
-          message: 'errors',
+          message: 'input invalid',
           data: {
             errors: errors.array()
           }
         }
-
       );
     }
 
@@ -55,8 +53,7 @@ var authenticateRouter = function () {
         }
       }
     }).then(async function (results) {
-
-
+ 
       bcrypt.hash(req.body.password, results[0].Salt, (err, hash) => {
         if (err) {
           res.json({ success: false });
@@ -74,7 +71,6 @@ var authenticateRouter = function () {
             {
               expiresIn: '30m' // token expires in 30 minutes, can be days like 100d, etc.
             });
-
  
           return res.status(200).send({
             success: true,
@@ -85,19 +81,17 @@ var authenticateRouter = function () {
         } else {
           return res.status(200).send({
             success: false,   
-            message: 'error'
+            message: 'password invalid'
           });
         }
-
-
-
+ 
       });
-
-
-
-
+  
     }, function (err) {
-      console.log("Something bad happened:", err);
+      return res.status(200).send({
+        success: false,   
+        message: err
+      });
     });
   });
 

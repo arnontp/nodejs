@@ -1,1 +1,0 @@
-UPDATE event_ticket SET Salt = @salt,Hash = @hash WHERE TicketID = 6
